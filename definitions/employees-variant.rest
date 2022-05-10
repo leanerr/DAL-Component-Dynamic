@@ -1,0 +1,133 @@
+#### Employee Variant API
+
+#### Get Employees Status
+GET http://localhost:3000/api/employees-variant/status
+
+#### Search Employees
+GET http://localhost:3000/api/employees-variant/search?name=jo
+
+#### Employee Summary
+GET http://localhost:3000/api/employees-variant/summary
+
+#### Add Many Employees
+POST http://localhost:3000/api/employees-variant/many
+content-type: application/json
+
+[
+    {
+        "Id": 0,
+        "Code": "CT8400",
+        "Name": "iran irani",
+        "Job": "Salesman",
+        "Salary": 20000,
+        "Department": "Sales"
+    },
+    {
+        "Id": 0,
+        "Code": "CT8500",
+        "Name": "shirazi",
+        "Job": "Salesman",
+        "Salary": 20000,
+        "Department": "Sales"
+    }
+]
+
+#### Get All Employees
+GET http://localhost:3000/api/employees-variant
+
+#### Get Employee
+GET http://localhost:3000/api/employees-variant/1
+
+#### Add Employee
+POST http://localhost:3000/api/employees-variant
+content-type: application/json
+
+{
+    "Id": 0,
+    "Code": "CT8000",
+    "Name": "Ali Askari",
+    "Job": "Student",
+    "Salary": 30000,
+    "Department": "Operations"
+}
+
+#### Update Employee
+PUT http://localhost:3000/api/employees-variant/49
+content-type: application/json
+
+{
+    "Id": 32,
+    "Code": "CT9000",
+    "Name": "Berry Allen",
+    "Job": "Manager",
+    "Salary": 20000,
+    "Department": "Operations"
+}
+
+#### Delete Employee
+DELETE http://localhost:3000/api/employees-variant/58
+
+
+
+
+
+
+
+
+
+
+
+
+#### NEW CUSTOM
+#SEARCH WITH BODY 
+POST  http://localhost:3000/api/employees-variant/cond1
+jSON :
+{
+"name" : "shirazi",
+"job": "sd",
+"department":"s",
+"salary":0,
+"code":"",
+"Id":0
+}
+ 
+
+
+ POST http://localhost:3000/api/employees-variant/cond2
+
+  {
+"name" : "shirazi",
+"job": "Salesman",
+"department":"Sales",
+"salary":20000,
+"code":"",
+"Id":0
+}
+
+
+
+POST http://localhost:3000/api/employees-variant/cond3
+
+{
+"name" : "shirazi",
+"job": "Salesman",
+"department":"Sales",
+"salary":20000,
+"code":"",
+"Id":0
+}
+
+POST http://localhost:3000/api/employees-variant/custom
+{
+    "Department": "Sales"
+}
+
+POST http://localhost:3000/api/employees-variant/custom/38
+{
+    "Id": 38,
+    "Code": "CT0011",
+    "Name": "Sadio Mane",
+    "Job": "Winger",
+    "Salary": 40000,
+    "Department": "Liverpool"
+}
